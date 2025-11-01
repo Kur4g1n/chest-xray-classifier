@@ -52,6 +52,42 @@
 
 ---
 
+## Настройка для участников
+
+### Требования
+
+- Python 3.10 или выше
+- [uv](https://github.com/astral-sh/uv)
+
+Установка `uv`:
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+### Первоначальная настройка
+
+После клонирования репозитория:
+
+```bash
+make install
+```
+
+### Рабочий процесс
+
+**Форматирование кода:**
+```bash
+make format
+```
+Форматирует все Python файлы и Jupyter ноутбуки с помощью black и isort.
+
+**Линтинг:**
+```bash
+make lint
+```
+Запускает проверку типов (pyright) и линтинг (flake8) на всем коде и ноутбуках.
+
+---
+
 ## Данные
 
 Источник: [NIH Chest X-rays](https://www.kaggle.com/datasets/nih-chest-xrays/data)

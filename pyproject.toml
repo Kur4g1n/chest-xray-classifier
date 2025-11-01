@@ -1,0 +1,43 @@
+[project]
+name = "chest-xray-classifier"
+version = "0.1.0"
+description = "Web application for chest X-ray classification using deep learning"
+requires-python = ">=3.10"
+
+[dependency-groups]
+dev = [
+    "black>=25.9.0",
+    "flake8>=7.3.0",
+    "isort>=7.0.0",
+    "nbdime>=4.0.2",
+    "nbqa>=1.9.1",
+    "nbstripout>=0.8.1",
+    "pre-commit>=4.3.0",
+    "pyright>=1.1.407",
+]
+
+[tool.black]
+line-length = 100
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.pyright]
+exclude = [
+    "**/__pycache__",
+    ".git",
+    ".venv",
+    "venv",
+]
+
+[tool.flake8]
+max-line-length = 100
+extend-ignore = ["E203", "E266", "E501", "W503"]
+exclude = [
+    ".git",
+    "__pycache__",
+    ".venv",
+    "venv",
+]
+max-complexity = 10
