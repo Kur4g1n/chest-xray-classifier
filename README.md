@@ -52,6 +52,40 @@ Goal: Assist physicians in preliminary image analysis and reduce workload during
 
 ---
 
+## Setup for Contributors
+
+### Prerequisites
+
+- Python 3.10 or higher
+- [uv](https://github.com/astral-sh/uv)
+
+Install `uv`:
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+### Initial Setup
+
+After cloning the repository:
+
+```bash
+make install
+```
+
+### Development Workflow
+
+**Format code:**
+```bash
+make format
+```
+Formats all Python files and Jupyter notebooks with black and isort.
+
+**Lint code:**
+```bash
+make lint
+```
+Runs type checking (pyright) and linting (flake8) on all code and notebooks.
+
 ## Dataset
 
 Source: [NIH Chest X-rays](https://www.kaggle.com/datasets/nih-chest-xrays/data)
